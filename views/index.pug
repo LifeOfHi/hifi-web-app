@@ -1,0 +1,61 @@
+extends layout
+
+block content
+  .container(style='min-height:95vh; max-height:100vh') 
+    include nav
+    .row.g-5
+      .col-md-4
+        include sidebar
+      .col-md-8
+        h3.py-2.mb-1.border-bottom Latest Post
+        .row
+          a.card-link(href='/articles/ab-testing', style='text-decoration:none')
+            .card.mb-3
+              .hidden-text(data-text="")#article-0
+                .row.g-0
+                  .col-md-4
+                    img.card-img-top.img-fluid(src="static/images/A-B_Card.png" alt="AB Testing Alternative Text")
+                  .col-md-8
+                    .card-body
+                      h5.card-title A/B Testing Part I: Statistical Power
+                      p.card-text An introduction to power into the A/B testing procedure
+                      p.card-text
+                        small Hari Ilangovan
+        h3.py-2.mb-1.border-bottom Future Topics
+        .row
+          .col
+            .card.text-bg-light.mb-3(style="max-width: 18rem;")
+              .card-header Statistics
+              .card-body
+                h5.card-title A/B Testing 
+                p.card-text An in-depth look into the hypothesis testing procedure with code examples
+          .col
+            .card.text-bg-light.mb-3(style="max-width: 18rem;")
+              .card-header Deep Learning
+              .card-body
+                h5.card-title Large Language Models
+                p.card-text Testing out pre-trained models from Hugging Face for NLP tasks
+          .col
+            .card.text-bg-light.mb-3(style="max-width: 18rem;")
+              .card-header Computer Science
+              .card-body
+                h5.card-title Knapsack Problem
+                p.card-text Let's set a lineup you would use in Daily Fantasy Sports
+
+          //- a.card-link(href='/articles/ab-testing', style='text-decoration:none')
+          //-   .card.mb-3
+          //-     .hidden-text(data-text="Article #2 on A/B Testing")#article-1
+          //-       .row.g-0
+          //-         .col-md-4
+          //-           img.card-img-top.img-fluid(src="static/images/A-B_Card.png" alt="AB Testing Alternative Text")
+          //-         .col-md-8
+          //-           .card-body
+          //-             h5.card-title A/B Testing Part II: Statistical Significance
+          //-             p.card-text An in-depth dive into statistical significance with code samples
+          //-             p.card-text
+          //-               small Hari Ilangovan
+        
+
+
+ 
+  

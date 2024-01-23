@@ -1,0 +1,36 @@
+extends /layout
+block content
+  .container
+    include /nav
+    .row.g-5.overflow-y-scroll(style='min-height:95vh; max-height:100vh')
+      .col-lg-3.col-md-4.d-none.d-md-block
+        include /sidebar
+      .col-lg-9.col-md-8
+        h3.py-2.mb-1.border-bottom Note Collection
+        .row
+          .col-4.d-none.d-md-block
+            nav#navbar-notes.h-100.flex-column.align-items-stretch.pe-4.border-end
+              nav.nav.nav-pills.flex-column
+                a.nav-link(href="#note-01") Classification Visual
+                nav.nav.nav-pills.flex-column
+                  a.nav-link(href="#note-02") SVM Definition
+              nav.nav.nav-pills.flex-column
+                a.nav-link(href="#note-03") Scaling &amp; Standardizing
+          .row.d-md-none
+            nav#navbar-notes-small.navbar.bg-body-tertiary.px-3.mb-3.navbar-nav-scroll(style="--bs-scroll-height: 85px;")
+              a.navbar-brand(href="#")
+              ul.nav.nav-pills
+                li.nav-item
+                  a.nav-link(href="#note-01") Classification Visual
+                li.nav-item
+                  a.nav-link(href="#note-02") SVM Definition
+                li.nav-item
+                  a.nav-link(href="#note-03") Scaling &amp; Standardizing
+          .col-md-8.col-sm-12.overflow-auto(style="max-height:80vh;")
+            div(data-bs-spy="scroll" data-bs-target="#navbar-notes" tabindex="0")
+              div#note-01
+                img.img-fluid(src="/static/images/Notes-01.png")
+              div#note-02
+                img.img-fluid(src="/static/images/Notes-02.png")
+              div#note-03
+                img.img-fluid(src="/static/images/Notes-03.png")

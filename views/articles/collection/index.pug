@@ -1,0 +1,23 @@
+extends /layout
+block content
+  .container
+    include /nav
+    .row.g-5(style='min-height:95vh;')
+      .col-md-4.d-none.d-md-block
+        include /sidebar
+      .col-md-8
+        h3.py-2.mb-1.border-bottom All Posts
+        .row
+          .card-container
+            a.card-link(href='/articles/ab-testing', style='text-decoration:none')
+              .card.mb-3
+                .hidden-text(data-text="")#article-0
+                  .row.g-0
+                    .col-md-4
+                      img.img-fluid(src="/static/images/A-B_Card.png" alt="AB Testing Alternative Text")
+                    .col-md-8
+                      .card-body
+                        h5.card-title A/B Testing Part I: Statistical Power
+                        p.card-text An introduction to power into the A/B testing procedure
+                        p.card-text
+                          small Hari Ilangovan
